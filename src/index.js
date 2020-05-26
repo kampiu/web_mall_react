@@ -1,18 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'index.css';
-import App from 'App';
+import 'Assets/style/common.less'
+import App from 'View/App.js';
 import * as serviceWorker from 'serviceWorker';
-import {
-    BrowserRouter as Router,
-    Route
-} from 'react-router-dom';
+import Service from 'Service'
 
+import Mocks from '@/Mock'
+
+React.$api = Service
 ReactDOM.render(
-  <Router>
-      <Route component = {App} />
-  </Router>,
-  document.getElementById('root')
+  <App />,
+  document.getElementById('app')
 );
 // ReactDOM.render(
 //   <React.StrictMode>

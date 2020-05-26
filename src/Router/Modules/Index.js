@@ -6,16 +6,34 @@ import Loading from 'Components/Loading'
 // const Home = () => import('view/Home')
 // const Article = () => import('view/Article')
 const Home = Loadable({
-	loader: () => import('view/Home'),
+	loader: () => import('View/Home'),
 	loading: Loading
 })
 
 const Article = Loadable({
-	loader: () => import('view/Article'),
+	loader: () => import('View/Article'),
+	loading: Loading
+})
+
+const ArticleDetail = Loadable({
+	loader: () => import('View/ArticleDetail'),
+	loading: Loading
+})
+
+const About = Loadable({
+	loader: () => import('View/About'),
+	loading: Loading
+})
+
+const Demo = Loadable({
+	loader: () => import('View/Demo'),
 	loading: Loading
 })
 
 export {
 	Home,
-	Article
+	Article,
+	About,
+	ArticleDetail,
+	Demo
 }

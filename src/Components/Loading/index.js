@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import './index.css'
 
 class Loading extends Component {
@@ -13,22 +13,6 @@ class Loading extends Component {
 	}
 	
 	componentDidMount () {
-	
-	}
-	
-	componentWillReceiveProps (newProps) {
-	
-	}
-	
-	shouldComponentUpdate (newProps, newState) {
-		return true
-	}
-	
-	componentWillUpdate (nextProps, nextState) {
-	
-	}
-	
-	componentDidUpdate (prevProps, prevState) {
 	
 	}
 	

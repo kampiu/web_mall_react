@@ -1,24 +1,77 @@
-import {
-	Home,
-	Article
-} from './Modules/Index'
+import React, { lazy, Suspense } from 'react'
+import { Redirect } from 'react-router-dom'
+import TabBarLayout from '../Layouts/TabBarLayout'
+import AppLayout from '../Layouts/AppLayout'
+
+const GetView = Component => props => (
+  <Suspense fallback={ null }>
+	  <Component { ...props } />
+  </Suspense>
+)
+
+const HomeComponent = lazy(() => import('../View/Tabbar/Home'))
+const ClassifyComponent = lazy(() => import('../View/Tabbar/Classify'))
+const SellerComponent = lazy(() => import('../View/Tabbar/Seller'))
+const CarComponent = lazy(() => import('../View/Tabbar/Car'))
+const PersonalComponent = lazy(() => import('../View/Tabbar/Personal'))
+const ProductDetailComponent = lazy(() => import('../View/Product/ProductDetail'))
+const ProductListComponent = lazy(() => import('../View/Product/ProductList'))
 
 
-const routes = [
+export default [
 	{
-		url: '/home',
-		component: Home,
-		text: '首页',
-		isToggleFooter:true,
-		isShowHeaderAndFooter: true
-	},
-	{
-		url: '/article',
-		component: Article,
-		text: '笔记',
-		isToggleFooter:true,
-		isShowHeaderAndFooter:true
+		component: AppLayout,
+		path: '/',
+		routes: [{
+			path: '/product/detail/:id',
+			exact: true,
+			component: GetView(ProductDetailComponent),
+		}, {
+			path: '/products',
+			exact: true,
+			component: GetView(ProductListComponent)
+		}, {
+			path: '/',
+			component: TabBarLayout,
+			routes: [{
+				path: '/',
+				exact: true,
+				render: () => <Redirect to="/home"/>,
+			},{
+				path: '/home',
+				component: GetView(HomeComponent),
+			}, {
+				path: '/classify',
+				component: GetView(ClassifyComponent),
+			}, {
+				path: '/seller',
+				component: GetView(SellerComponent),
+			}, {
+				path: '/car',
+				component: GetView(CarComponent),
+			}, {
+				path: '/personal',
+				component: GetView(PersonalComponent),
+			}]
+		// }, {
+		// 	path: '/',
+		// 	exact: true,
+		// 	render: () => <Redirect to="/home"/>,
+		}]
 	}
 ]
 
-export default routes
+//  嵌套路由
+// {
+// 	path: '/fen',
+// 	  component: FLayout,
+//   routes: [{
+// 	path: '/fen/a',
+// 	exact: true,
+// 	component: GetView(A),
+// }, {
+// 	path: '/fen/b',
+// 	exact: true,
+// 	component: GetView(B),
+// }]
+// }
