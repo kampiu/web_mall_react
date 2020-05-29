@@ -22,7 +22,7 @@ export const ProductStyle = styled.div`
 	    position: relative;
 	    z-index: 10;
 	    overflow: hidden;
-	    img{
+	    img,.img-lazy{
 		    width: 100%;
 	        height: 100%;
 	    }

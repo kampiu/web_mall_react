@@ -13,14 +13,14 @@
 	box-sizing: border-box;
 	-webkit-touch-callout: none;
 	-webkit-tap-highlight-color: transparent;
-
-	//font-size: 0.24rem;
-	//-webkit-user-select: none;
 }
 
 .iconfont{
 	font-family: "iconfont", PingFang SC, serif;
 	font-style: normal;
+}
+.img-lazy{
+	background-color: #f0f0f0;
 }
 
 html, body {
@@ -111,5 +111,10 @@ input::-webkit-search-cancel-button {
 	flex: auto;
 }
 
+#app{
 
+	position: fixed;
+	/*chrome 内核 浏览器 position: fixed 防止抖动*/
+	-webkit-transform: translateZ(0);
+}
 

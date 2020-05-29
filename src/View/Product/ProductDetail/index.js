@@ -71,10 +71,10 @@ function ProductDetail (props) {
 				  <div className="icon shop-icon"/>
 				  <span className="desc">店铺</span>
 			  </div>
-			  <div className="button">
+			  <Link to="/cart" className="button">
 				  <div className="icon car-icon"/>
 				  <span className="desc">购物车</span>
-			  </div>
+			  </Link>
 			  <div className="menu">
 				  <div className="button collect-button" onClick={ () => changeShow(true) }>
 					  <span>加入购物车</span>

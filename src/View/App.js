@@ -6,7 +6,6 @@ import { HashRouter } from "react-router-dom";
 import store from '@/Store'
 
 function App () {
-	console.log('-app-', routers)
 	return (
 	  
 	  <Provider store={store}>

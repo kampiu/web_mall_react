@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Swiper from 'swiper'
 import { ProductBanner } from './style'
+import LazyLoad from 'react-lazyload'
 
 function Banner ({ banner }) {
 	
@@ -29,7 +30,9 @@ function Banner ({ banner }) {
 						  return (
 							<div className="swiper-slide" key={ item }>
 								<div className="slider-nav">
-									<img src={ item } width="100%" height="100%" alt="推荐"/>
+									<LazyLoad placeholder={ <div className="img-lazy"/> }>
+										<img src={ item } width="100%" height="100%" alt="推荐"/>
+									</LazyLoad>
 								</div>
 							</div>
 						  )

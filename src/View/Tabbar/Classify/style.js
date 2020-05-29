@@ -61,6 +61,21 @@ export const ClassifyStyle = styled.div`
 	    font-size: .26rem;
 	    font-weight: 800;
 	    color: #333;
+	    .active{
+	        z-index: 10;
+	        position:relative;
+	        &::before{
+	            content: "";
+	            width: 100%;
+	            height: 4px;
+	            display: inline-block;
+	            background-color: #FFDE45;
+	            position:absolute;
+	            left:0;
+	            bottom: 0;
+	            z-index: -1;
+	        }
+	    }
     }
     .main-content{
 	    width: 100%;

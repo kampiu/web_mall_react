@@ -12,7 +12,7 @@ const GetView = Component => props => (
 const HomeComponent = lazy(() => import('../View/Tabbar/Home'))
 const ClassifyComponent = lazy(() => import('../View/Tabbar/Classify'))
 const SellerComponent = lazy(() => import('../View/Tabbar/Seller'))
-const CarComponent = lazy(() => import('../View/Tabbar/Car'))
+const CartComponent = lazy(() => import('../View/Tabbar/Cart'))
 const PersonalComponent = lazy(() => import('../View/Tabbar/Personal'))
 const ProductDetailComponent = lazy(() => import('../View/Product/ProductDetail'))
 const ProductListComponent = lazy(() => import('../View/Product/ProductList'))
@@ -47,8 +47,8 @@ export default [
 				path: '/seller',
 				component: GetView(SellerComponent),
 			}, {
-				path: '/car',
-				component: GetView(CarComponent),
+				path: '/cart',
+				component: GetView(CartComponent),
 			}, {
 				path: '/personal',
 				component: GetView(PersonalComponent),

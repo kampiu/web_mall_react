@@ -27,8 +27,8 @@ function TabBar ({ routeName }) {
 		activeIcon: 'https://lib.billson.club/images/tabbar_seller_icon_active.png',
 	}, {
 		title: '购物车',
-		name: 'car',
-		path: '/car',
+		name: 'cart',
+		path: '/cart',
 		icon: 'https://lib.billson.club/images/tabbar_cart_icon.png',
 		activeIcon: 'https://lib.billson.club/images/tabbar_cart_icon_active.png',
 	}, {

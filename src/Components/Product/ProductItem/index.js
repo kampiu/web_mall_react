@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import { ProductStyle } from './style'
 import { Link } from 'react-router-dom'
+import LazyLoad from "react-lazyload"
 
 function ProductItem ({ dataItem }) {
 	return (
 	  <Link to={"/product/detail/" + dataItem.id}>
 		  <ProductStyle>
 			  <div className="icon" title={ dataItem.name }>
-				  <img src={ dataItem.thumb } alt=""/>
+				  <LazyLoad placeholder={ <div className="img-lazy" />}>
+					  <img src={ dataItem.thumb } alt=""/>
+				  </LazyLoad>
 			  </div>
 			  <div className="content">
 				  <div className="name">{ dataItem.name }</div>

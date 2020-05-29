@@ -118,10 +118,12 @@ export const BrandGridStyle = styled.div`
 	    background-size: contain;
 	    
 	    img{
+	        position: absolute;
 	        height: 100%;
             width: auto;
-			transform: translateX(-50%);
-			margin-left: 50%;;
+            left: 50%;
+            top: 50%;
+			transform: translate(-50%, -50%);
 	    }
     }
 `

@@ -128,6 +128,9 @@ export const TabStyle = styled.div`
 		    &:last-child{
 		        border-radius: .2rem .2rem 0 .2rem;
 		    }
+		    &:first-child {
+			    border-radius: .2rem .2rem .2rem 0;
+			}
 		    span{
 		        font-size: .28rem;
 			    font-weight: 400;
@@ -191,6 +194,9 @@ export const TabStyle = styled.div`
 	    cursor: pointer;
 	    -webkit-user-select: none;
 	    outline: 0;
+	    &:active{
+	        background-color: rgba(0,0,0,0.02);
+	    }
 	    i{
 		    display: flex;
 		    align-items: center;
@@ -254,7 +260,7 @@ export const MenuStyle = styled.div`
 		    background-image: url("https://www.xiehome.com/m_three_v/images/jiantou.png");
 	    }
 	    &:active{
-	        background-color: rgba(0,0,0,0.08);
+	        background-color: rgba(0,0,0,0.02);
             outline: 0;
 	    }
     }
