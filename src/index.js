@@ -8,7 +8,7 @@ import Service from 'Service'
 import Mocks from '@/Mock'
 
 React.$api = Service
-ReactDOM.render( 
+ReactDOM.render(
   <App />,
   document.getElementById('app')
 );
